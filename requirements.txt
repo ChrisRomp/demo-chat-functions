@@ -1,0 +1,4 @@
+azure-functions
+Flask[async]
+asyncio
+requests

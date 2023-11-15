@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Add more styles as needed -->
+</head>
+<body>
+    <div class="container">
+        <h2>Your App</h2>
+        <input type="text" id="prompt" placeholder="Enter name">
+        <button onclick="sendPrompt()">Submit</button>
+        <div id="response"></div>
+    </div>
+
+    <script>
+        async function sendPrompt() {
+            document.getElementById('response').innerText = 'Waiting for response...';
+            let prompt = document.getElementById('prompt').value;
+            let response = await fetch('/get-response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({prompt}),
+            });
+            let data = await response.json();
+            document.getElementById('response').innerText = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+</html>
