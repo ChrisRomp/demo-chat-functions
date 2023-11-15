@@ -161,3 +161,6 @@ cython_debug/
 
 # Ignore azurite dev files
 __azurite*
+__blobstorage__/*
+__queuestorage__/*
+__tablestorage__/*

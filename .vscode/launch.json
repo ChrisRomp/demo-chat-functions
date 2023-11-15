@@ -2,6 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Function App",
+            "type": "python",
+            "request": "attach",
+            "port": 9091,
+            "preLaunchTask": "func: host start"
+        },
+        {
             "name": "Python: Flask",
             "type": "python",
             "request": "launch",
@@ -18,13 +25,6 @@
             "jinja": true,
             "justMyCode": true,
             "cwd": "${workspaceFolder}/src/webApp"
-        },
-        {
-            "name": "Attach to Python Functions",
-            "type": "python",
-            "request": "attach",
-            "port": 9091,
-            "preLaunchTask": "func: host start"
         },
     ]
 }
