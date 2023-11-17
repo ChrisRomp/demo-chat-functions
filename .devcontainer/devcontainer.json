@@ -22,5 +22,10 @@
 	"postCreateCommand": "pip3 install -r requirements.txt",
 
 	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+
+	// Including Azure Developer CLI
+	"features": {
+		"ghcr.io/azure/azure-dev/azd:0": {}
+	}
 }

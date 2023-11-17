@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: demo-chat-functions
+metadata:
+    template: azd-init@1.5.0
+services:
+    functionApp:
+        project: src/functionApp
+        host: appservice
+        language: python
+    webApp:
+        project: src/webApp
+        host: appservice
+        language: python

@@ -164,3 +164,4 @@ __azurite*
 __blobstorage__/*
 __queuestorage__/*
 __tablestorage__/*
+.azure
